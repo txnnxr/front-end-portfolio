@@ -1,3 +1,4 @@
+//compile dis
 @import 'fonts'
 @import 'colors'
 @import 'mixins'
@@ -15,7 +16,7 @@ body
 	color: $onyx
 //links
 a
-	color: rgba(248, 223, 79, 1)
+	color: $eggYolk
 	cursor: pointer
 	text-decoration: none
 a:hover
@@ -29,8 +30,8 @@ a:active
 	text-align: center
 
 
-//temp colors 
-h3 
+//temp colors
+h3
 	color: pink
 
 //images
@@ -139,8 +140,8 @@ img
 			margin-left: $side-padding
 			margin-right: $side-padding
 		i
-			margin-left: $side-padding 
-			margin-right: $side-padding	
+			margin-left: $side-padding
+			margin-right: $side-padding
 	.ca-block
 		padding-bottom: 15px
 		display: block
@@ -156,7 +157,7 @@ img
 		i
 			color: $medium-turquoise
 			display: block
-			text-align: right		
+			text-align: right
 	.ca-block:nth-child(odd)
 		background-color: rgba(242, 242, 242, 0.69)
 		margin-left: -$side-padding
@@ -164,10 +165,10 @@ img
 		border-top: 1px solid $border-outline
 		border-bottom: 1px solid $border-outline
 		h3
-			margin-left: $side-padding 
+			margin-left: $side-padding
 			margin-right: $side-padding
 		i
-			margin-left: $side-padding 
+			margin-left: $side-padding
 			margin-right: $side-padding
 #resume
 	background-color: $english-lavender
@@ -176,6 +177,9 @@ img
 		margin-left: 3rem
 		margin-right: 3rem
 	a
+		background-color: white
+		border-radius: 8px
+		padding: 0.5rem
 		margin-left: 1rem
 		margin-right: 1rem
 #about
@@ -200,7 +204,7 @@ img
 		display: block
 		margin-left: auto
 		margin-right: auto
-	a.title	
+	a.title
 		font-size: 3.3rem
 		font-family: $lato
 		&:hover
@@ -215,20 +219,38 @@ img
 		font-size: 1rem
 		font-weight: 700
 
-footer ul 
+footer ul
 	list-style-type: none
 	padding: 1rem
 	text-align: center
-	a
-		color: $sunny
-	li 
+	li
 		display: inline-block
 		padding: 1em
 		color: $black
-	i.fa.font-awesome 
+	i.fa.font-awesome
 		font-size: 4.5rem
-
-@media(min-width:480px)/*small tablets portrait*/ 
+nav
+  list-style: none
+  position: fixed
+  top: 10px
+  font-size: 1.5em
+  left: 10px
+  font-family: $railway
+  z-index: 1
+  padding: 0.2rem 1rem 0.5rem 0rem
+  transition: all 0.3s ease-in-out
+  .bar-nav
+    display: block
+    color: white
+    padding: 0.5rem
+    .fa
+      text-shadow: 1px 1px 5px black
+      opacity: 1
+  .nav-item
+    margin-top: 5px
+    margin-bottom: 5px
+    display: none
+@media(min-width:480px)/*small tablets portrait*/
 	+updateBlockSidePadding(3rem)
 	#pond-preview
 		margin: auto
@@ -275,4 +297,3 @@ footer ul
 	#pond-preview
 		margin: 1rem 1rem 1rem 1rem
 @media(min-width:1025px) /*standard laptops/desktops - large tablets(portrait) */
-

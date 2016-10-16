@@ -2,25 +2,20 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Tanner Wells">
+	<meta name="description" content="A front-end portfolio for an up and coming developer">
+	<!-- Look at you reading the source
+
+
+															... go you! -->
 	<title>TXNNXR</title>
 	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 	<div class ="block-set" id="nav">
-		<div class="nav block">
+		<div class="nav block" id="top">
 			<a class="title schmid-colors" href="/">Tanner Wells</a>
 			<p class="subtitle">Philadelphia based front-end developer</p>
-		</div>
-	</div>
-	<div class="block-set" id="about">
-		<div class="block-set-title">
-			<h1>About Me</h1>
-		</div>
-		<div class="block about-block">
-			<p>
-				Hi, I’m Tanner, a Philadelphia based front-end developer. I have a passion for learning new things and have recently been building upon my Computer Science education by taking my front-end development skills to the next level. I am currently: completing freecodecamp’s Front End Development Certification, working on several personal projects, and working with a client to build a portfolio. I feel that this recent surge of work along with my drive to take on new challenges would make a great addition to any company’s current web team!
-			</p>
-			<br class="clear" />
 		</div>
 	</div>
 	<div class="block-set" id="work">
@@ -40,14 +35,14 @@
 				</ul>
 			</div>
 			<div class="block-preview">
-				<a class="live-link" href="projects/drax/index.hmtl" target="_blank">
+				<a class="live-link" href="projects/drax/index.html" target="_blank">
 					<img src="img/draxScreenshot.png" id="drax-screenshot">
 						<i class="fa fa-safari" aria-hidden="true"></i>
 						Website
 				</a>
 			</div>
 			<p>
-				This is a mock website I designed and developed for a New Zealand band. It was my first foray into the wonderful world of parallax and it helped me learn about building for in 3D space. I also implemented some new things I’ve been learning with transitions and animations.
+				This is a mock website I designed and developed for a New Zealand band. It was my first foray into the wonderful world of parallax and it helped me learn about building for in 3D space. I also implemented some new things I&apos;ve been learning with transitions and animations.
 			</p>
 			<br class="clear" />
 			<a href="https://github.com/txnnxr/Band-Project-Website" class="block-source" target="_blank">
@@ -79,7 +74,7 @@
 				</a>
 			</div>
 			<p>
-				This is projet is a mock photography portfolio which I'm using to grasp some backend concepts. While I consider myself primarily a front-end developer this project is giving me a deeper understanding of backend technologies such as MongoDB and Node.js. With this understanding I can use my knowledge of the backend to help create a front end that blends form and function into a beautiful and efficient experience for the user.
+				This is projet is a mock photography portfolio which I&apos;m using to grasp some backend concepts. While I consider myself primarily a front-end developer this project is giving me a deeper understanding of backend technologies such as MongoDB and Node.js. With this understanding I can use my knowledge of the backend to help create a front end that blends form and function into a beautiful and efficient experience for the user.
 			</p>
 			<br class="clear" />
 			<a href="https://github.com/txnnxr" class="block-source" target="_blank">
@@ -170,6 +165,17 @@
 		</div>
 		<div class="block ghost-block"></div>
 	</div>
+	<div class="block-set" id="about">
+		<div class="block-set-title">
+			<h1>About Me</h1>
+		</div>
+		<div class="block about-block">
+			<p>
+				Hi, I&apos;m Tanner, a Philadelphia based front-end developer. I have a passion for learning new things and have recently been building upon my Computer Science education by taking my front-end development skills to the next level. I am currently: completing freecodecamp&apos;s Front End Development Certification, working on several personal projects, and working with a client to build a portfolio. I feel that this recent surge of work along with my drive to take on new challenges would make a great addition to any company&apos;s current web team!
+			</p>
+			<br class="clear" />
+		</div>
+	</div>
 	<div class="block-set" id="resume">
 		<p>
 			Need a physical copy for someone who's still trying to figure out this whole <em>"internet"</em>  thing?<br>
@@ -210,7 +216,26 @@
 
 		</ul>
 	</footer>
-	<!-- <script src="/javascripts/jquery-3.1.0.min.js"></script> -->
+	<nav>
+		<div class="bar-nav"><i class="fa fa-bars" aria-hidden="true"></i></div>
+		<li class="nav-item"><a href="#top">top</a></li>
+		<li class="nav-item"><a href="#about">about</a></li>
+		<li class="nav-item"><a href="#work">projects</a></li>
+		<li class="nav-item"><a href="#education">education</a></li>
+		<li class="nav-item"><a href="#resume">resume</a></li>
+		<!-- <li class="nav-item"><a href="blog/" target="_blank">blog</a></li> -->
+	</nav>
+	<script src="js/jquery-3.1.0.min.js"></script>
 	<script src="https://use.fontawesome.com/112cfad2d1.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-83260514-1', 'auto');
+	  ga('send', 'pageview');
+</script>
 </body>
 </html>
