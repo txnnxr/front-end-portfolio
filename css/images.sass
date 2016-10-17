@@ -1,0 +1,78 @@
+
+// all that kass
+$blueKass: "../img/kd/blueKass.png"
+$redKass: "../img/kd/redKass.png"
+$grayKass: "../img/kd/grayKass.png"
+$yellowKass: "../img/kd/yellowKass.png"
+//the non movers
+$flowers: "../img/kd/flowers.png"
+$pinkSky: "../img/kd/pinkSky.png"
+//the hills have pies
+$rightHighHill: "../img/kd/rightHighHill.png"
+$rightLowHill: "../img/kd/rightLowHill.png"
+$leftHighHill: "../img/kd/leftHighHill.png"
+$leftLowHill: "../img/kd/leftLowHill.png"
+.blueKass
+  background: url($blueKass)
+  z-index: 9
+.redKass
+  background: url($redKass)
+  z-index: 10
+.grayKass
+  background: url($grayKass)
+  z-index: 7
+.yellowKass
+  background: url($yellowKass)
+  z-index: 8
+.flowers
+  background: url($flowers)
+  background-size: 100%
+  z-index: 1
+.blueKass, .redKass, .grayKass, .yellowKass, .flowers, .leftHighHill, .leftLowHill, .rightLowHill, .rightHighHill, .pinkSky
+  width: 100%
+  height: 100px
+  background-repeat: no-repeat
+  background-size: 100%
+.rightHighHill
+  background: url($rightHighHill)
+  position: absolute
+  z-index: 3
+  height: 250px
+  background-size: 100%
+  background-attachment: fixed
+  background-size: 100%
+  overflow: hidden
+  height: 550px
+  background-repeat: no-repeat
+.rightLowHill
+  background: url($rightLowHill)
+  position: absolute
+  z-index: 4
+  height: 550px
+  background-size: 100%
+  background-repeat: no-repeat
+.leftHighHill
+  background: url($leftHighHill)
+  position: absolute
+  z-index: 5
+  height: 550px
+  background-size: 100%
+  background-repeat: no-repeat
+.leftLowHill
+  background: url($leftLowHill)
+  position: absolute
+  z-index: 6
+  height: 550px
+  background-size: 100%
+  background-repeat: no-repeat
+.pinkSky
+  background: url($pinkSky)
+  position: relative
+  height: 550px
+  background-color: white
+  background-size: auto 550px
+  background-position: top center
+  background-attachment: fixed
+  background-repeat: no-repeat
+  overflow: hidden
+  z-index: 1
