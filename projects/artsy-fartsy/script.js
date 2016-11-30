@@ -1,22 +1,29 @@
 $(window).scroll(function(){
     var wScroll = $(this).scrollTop();
-    $('.logo').css({
-      'transform' : 'translate(0px, '+ wScroll /2 +'%)'
+    $('.rightLowHill').css({
+      'margin-top' : (wScroll*3) + "px"
     });
-    $('.back-bird').css({
-      'transform' : 'translate(0px, '+ wScroll /4 +'%)'
+    $('.rightHighHill').css({
+      'margin-top' : '-'+ (wScroll) + "px"
     })
-    $('.fore-bird').css({
-      'transform' : 'translate(0px, -'+ wScroll /20 +'%)'
+    $('.leftLowHill').css({
+      'margin-left' : (wScroll*2) + "px"
     });
-
-
-
-
-
-
-
-
+    $('.leftHighHill').css({
+      'margin-left' : "-" + (wScroll*2) + "px"
+    });
+    $('.grayKass, .yellowKass, .blueKass, .redKass').css({
+      'transform': 'translateY('+(wScroll*1.1) + "px)"
+    });
+    $('.flowers').css({
+      'margin-top' : (wScroll*2) - 180 + "px"
+    });
+    $('.container').css({
+      'margin-top' : (wScroll*1.07) + "px"
+    });
+    $('.pinkSky').css({
+      'margin-top' : "-" + (wScroll*1.01) + "px"
+    });
 
 
 

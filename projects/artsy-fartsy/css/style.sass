@@ -1,9 +1,17 @@
 //compile
 @import 'images'
+body
+  padding: 0
+  margin: 0
+.container
+  height: 750px
+  position: relative
+  overflow: hidden
 .pinkSky
   background: url($pinkSky)
-  position: relative
+  position: absolute
   height: 758px
+  width: 100%
   background-color: white
   background-size: 100%
   background-position: top center
@@ -11,11 +19,13 @@
   background-repeat: no-repeat
   overflow: hidden
   z-index: 1
+  animation: changeSky 10s infinite
 .rightHighHill
   background: url($rightHighHill)
   position: absolute
-  z-index: 2
+  z-index: 3
   height: 250px
+  margin-left: 20px
   background-size: 100%
   background-position-y: -95px
   background-size: 100%
@@ -23,6 +33,7 @@
   height: 700px
   width: 100%
   background-repeat: no-repeat
+  animation: waveLeft 6s infinite
 .rightLowHill
   background: url($rightLowHill)
   position: absolute
@@ -31,69 +42,170 @@
   width: 100%
   background-size: 100%
   background-repeat: no-repeat
+  animation: waveRight 4s infinite linear
+  /*animation-direction: linear*/
 .leftHighHill
   background: url($leftHighHill)
   position: absolute
   z-index: 4
+  margin-left: -10px
   height: 700px
   width: 100%
   background-size: 100%
   background-repeat: no-repeat
+  animation: waveRight 5s infinite linear
+  /*animation-direction: linear*/
 .leftLowHill
   background: url($leftLowHill)
   position: absolute
-  z-index: 3
+  z-index: 2
   height: 700px
   width: 100%
   background-size: 100%
   background-repeat: no-repeat
+  animation: waveLeft 5s infinite
 .hillBox
-  margin-top: 100px
+  margin-top: 80px
 .flowers
   background: url($flowers)
-  margin-top: -191px
+  margin-top: -180px
   position: absolute
   z-index: 5
   height: 860px
   width: 100%
   background-size: 100%
   background-repeat: no-repeat
+  animation: opacityIn 2s normal 6s backwards, slowShake 4s infinite
 .grayKass
   background: url($grayKass)
-  margin-top: 23px
+  margin-top: 37px
   position: absolute
   z-index: 6
   height: 635px
   width: 100%
   background-size: 100%
   background-repeat: no-repeat
+  animation: inUp 2s normal 4s backwards
 .yellowKass
   background: url($yellowKass)
-  margin-top: 25px
-  margin-left: 455px
+  margin-top: 45px
+  margin-left: 461px
   position: absolute
   z-index: 7
   height: 635px
   width: 64%
   background-size: 100%
   background-repeat: no-repeat
+  animation: yellowKassinRight 5s normal 2s backwards, rotateYellowKass 4s infinite
 .blueKass
   background: url($blueKass)
-  margin-top: 21px
-  margin-left: 211px
+  margin-top: 36px
+  margin-left: 216px
   position: absolute
   z-index: 8
   height: 635px
   width: 64%
   background-size: 100%
   background-repeat: no-repeat
+  animation: blueKassinRight 3s normal 2s backwards, rotateBlueKass 4s infinite
 .redKass
   background: url($redKass)
-  margin-top: 21px
-  margin-left: -6px
+  margin-top: 41px
+  margin-left: 7px
   position: absolute
   z-index: 9
   height: 640px
   width: 67%
   background-size: 100%
   background-repeat: no-repeat
+  animation: redKassinRight 2s normal 2s backwards, rotateRedKass 4s infinite
+.flowerBox
+  overflow: hidden
+@keyframes waveRight
+  0%
+    transform: rotate(0deg) translate(-10px) rotate(0deg)
+  100%
+    transform: rotate(360deg) translate(-10px) rotate(-360deg)
+@keyframes waveLeft
+  0%
+    transform: rotate(0deg) translate(15px) rotate(0deg)
+  100%
+    transform: rotate(-360deg) translate(15px) rotate(360deg)
+@keyframes slowShake
+  0%
+    transform: translate(-12px, 0px)
+  50%
+    transform: translate(20px, 0px)
+  100%
+    transform: translate(-12px, 0px)
+@keyframes changeSky
+  0%
+    filter: hue-rotate(0deg) contrast(100%)
+  50%
+    filter: hue-rotate(360deg) contrast(120%)
+  100%
+    filter: hue-rotate(0deg) contrast(100%)
+@keyframes rotateYellowKass
+  0%
+    filter: hue-rotate(0deg)
+  32.9%
+    filter: hue-rotate(0deg)
+  33%
+    filter: hue-rotate(160deg)
+  65.9%
+    filter: hue-rotate(160deg)
+  66%
+    filter: hue-rotate(270deg)
+  100%
+    filter: hue-rotate(270deg)
+@keyframes rotateBlueKass
+  0%
+    filter: hue-rotate(0deg)
+  32.9%
+    filter: hue-rotate(0deg)
+  33%
+    filter: hue-rotate(117deg)
+  65.9%
+    filter: hue-rotate(117deg)
+  66%
+    filter: hue-rotate(203deg)
+  100%
+    filter: hue-rotate(203deg)
+@keyframes rotateRedKass
+  0%
+    filter: hue-rotate(0deg)
+  32.9%
+    filter: hue-rotate(0deg)
+  33%
+    filter: hue-rotate(90deg)
+  65.9%
+    filter: hue-rotate(90deg)
+  66%
+    filter: hue-rotate(253deg)
+  100%
+    filter: hue-rotate(253deg)
+@keyframes yellowKassinRight
+  0%
+    transform: translate3d(-1400px, 0px, 0px)
+  100%
+    transform: translate3d(0px , 0px, 0px)
+@keyframes blueKassinRight
+  0%
+    transform: translate3d(-1400px, 0px, 0px)
+  100%
+    transform: translate3d(0px, 0px, 0px)
+@keyframes redKassinRight
+  0%
+    transform: translate3d(-1400px, 0px, 0px)
+  100%
+    transform: translate3d(0px, 0px, 0px)
+@keyframes inUp
+  0%
+    transform: translate3d(0px, 1400px, 0px)
+  100%
+    transform: translate3d(0px, 0px, 0px)
+@keyframes opacityIn
+  0%
+    filter: opacity(0%)
+  100%
+    filter: opacity(100%)
