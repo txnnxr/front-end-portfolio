@@ -4,8 +4,6 @@
 @import 'images'
 @import 'mixins'
 
-
-
 .clear
 	clear: both
 	line-height: 0
@@ -13,7 +11,7 @@
 //body setup
 body
 	margin: 0
-	font-family: $lato
+	font-family: $opensans
 	color: $onyx
 //links
 a
@@ -23,23 +21,14 @@ a
 a:hover
 	color: rgba($wood, 0.9)
 	text-decoration: none
-	//text-shadow: 2px 2px rgba($medium-turquoise, 0.9)
 a:active
 	//text-shadow: 0px 0px rgba($medium-turquoise, 0.9)
 .live-link
 	display: block
 	text-align: center
-
-
-//temp colors
-h3
-	color: pink
-
 //images
 img
 	width: 100%
-
-
 //general block setup
 .block-set
 	float: left
@@ -59,13 +48,13 @@ img
 	margin-left: $side-padding
 	margin-right: $side-padding
 	text-align: left
-	box-shadow: 3px 5px 14px
+	box-shadow: 0px 5px 15px black
 .ghost-block
 	display: none
 .block-top
-    margin: -16px -48px 20px -48px
-    padding: 10px 20px
-    background-color: $sunny
+  margin: -16px -48px 20px -48px
+  padding: 10px 20px
+  background-color: $sunny
 .block-title
 	color: $white
 	text-align: left
@@ -81,32 +70,26 @@ img
 	margin-left: -$side-padding
 	margin-right: -$side-padding
 	margin-bottom: -1rem
-	background-color: rgba(165, 56, 255, 0.02)
+	background-color: #f5f5f5
 //work-block-set
 #work
-	.work-block
-		border-color: darksalmon
-		border-right-color: rgb(175, 113, 92)
-.skills-applied
-	list-style-type: none
-	margin: auto auto 10px auto
-	padding-left: 0
-	li
-		background-color: gray
-		color: white
-		padding: 0.33rem
-		border-radius: 3px
-		display: inline-block
-		margin: 0.25rem
-		box-shadow: 4px 4px 4px black
+	.skills-applied
+		list-style-type: none
+		margin: 10px auto 10px 0px
+		padding-left: 0
+		li
+			background-color: #9E9E9E
+			color: white
+			padding: 0.33rem
+			border-radius: 3px
+			display: inline-block
+			margin: 0.25rem
+			box-shadow: 4px 4px 4px black
 #pond-preview
 	margin: auto
 	width: 50%
 //education-block-set
 #education
-	.education-block
-		border-color: rgba(149, 210, 237, 0.85)
-		border-right-color: rgba(100, 141, 161, 1)
 	.book-block
 		padding: 0px 5px 15px 5px
 		display: block
@@ -165,29 +148,24 @@ img
 	a
 		margin-left: 1rem
 		margin-right: 1rem
-#about
-	.about-block
-		border-color: rgba(186, 223, 186, 1)
-		border-right-color: rgba(111, 132, 111, 1)
 //navbar
 #nav
 	float: none
 	margin-top: -1em
 	padding-top: 1em
 .nav
-	text-align: center
 	padding: 0.5rem
 	&.block
 		width: 80%
 		margin-bottom: 1rem
-		border-color: #f1f67b
-		border-right-color: #b0b359
 		display: block
 		margin-left: auto
 		margin-right: auto
+		padding-left: 1rem
 	a.title
 		font-size: 3.3rem
-		font-family: $lato
+		font-family: $quicksand
+		color: black
 		&:hover
 			color: rgba($wood, 0.8)
 			text-decoration: none
@@ -196,10 +174,10 @@ img
 			//text-shadow: 0px 0px rgba($medium-turquoise, 0.9)
 	.subtitle
 		color: rgba($onyx, 0.75)
-		font-family: $railway
+		font-family: $opensans
 		font-size: 1rem
 		font-weight: 700
-
+		padding-left: 0.8rem
 footer ul
 	list-style-type: none
 	padding: 1rem
@@ -212,15 +190,14 @@ footer ul
 		color: $black
 	i.fa.font-awesome
 		font-size: 4.5rem
++updateBlockSidePadding(3rem)
 
 @media(min-width:480px)/*small tablets portrait*/
-	+updateBlockSidePadding(3rem)
+	/*+updateBlockSidePadding(3rem)*/
 	#pond-preview
 		margin: auto
 		width: 50%
 @media(min-width:769px) /*small tablets(landscape)*/
-	.nav.block
-		width: 40%
 	+updateBlockWidth(75%)
 	.block-preview
 		width: 90%
@@ -237,7 +214,7 @@ footer ul
 			width: 61%
 			float: left
 	#pond-block-top
-		float: left
+		//float: left
 	.block-set-title
 		padding-left: 3rem
 		font-size: 2rem
