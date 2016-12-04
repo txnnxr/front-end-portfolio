@@ -3,6 +3,7 @@
 @import 'colors'
 @import 'images'
 @import 'mixins'
+// TODO: change hover color for links
 
 .clear
 	clear: both
@@ -12,17 +13,16 @@
 body
 	margin: 0
 	font-family: $opensans
-	color: $onyx
+	color: $black
+	background-color: $lighterGreen
 //links
 a
-	color: rgba(248, 223, 79, 1)
+	color: $primeRed
 	cursor: pointer
 	text-decoration: none
 a:hover
-	color: rgba($wood, 0.9)
+	color: $lightRed
 	text-decoration: none
-a:active
-	//text-shadow: 0px 0px rgba($medium-turquoise, 0.9)
 .live-link
 	display: block
 	text-align: center
@@ -35,12 +35,13 @@ img
 	padding-bottom: 2rem
 	width: 100%
 .block-set-title
-	color: $wood
+	color: $white
 	text-shadow: 2px 2px 5px black
 	padding-left: 1rem
 	font-size: 2rem
-	padding-top: 1rem
 	text-align: left
+	h1
+		margin-top: 0
 .block
 	background-color: white
 	padding: 1rem $side-padding 1rem $side-padding
@@ -54,7 +55,7 @@ img
 .block-top
   margin: -16px -48px 20px -48px
   padding: 10px 20px
-  background-color: $sunny
+  background-color: $primeGreen
 .block-title
 	color: $white
 	text-align: left
@@ -103,7 +104,7 @@ img
 		h3
 			margin: 15px auto 5px auto
 		i
-			color: $medium-turquoise
+			color: $primeGreen
 			display: block
 			text-align: right
 	.book-block:nth-child(odd)
@@ -128,7 +129,7 @@ img
 		h3
 			margin: 15px auto 5px auto
 		i
-			color: $medium-turquoise
+			color: $primeGreen
 			display: block
 			text-align: right
 	.ca-block:nth-child(odd)
@@ -148,10 +149,17 @@ img
 	a
 		margin-left: 1rem
 		margin-right: 1rem
+		padding: 0.5rem
+		background-color: $primeRed
+		color: $white
+	a:hover
+		background-color: $lightRed
+	a:active
+		background-color: $white
+		color: $primeRed
 //navbar
 #nav
 	float: none
-	margin-top: -1em
 	padding-top: 1em
 .nav
 	padding: 0.5rem
@@ -167,13 +175,12 @@ img
 		font-family: $quicksand
 		color: black
 		&:hover
-			color: rgba($wood, 0.8)
 			text-decoration: none
 			//text-shadow: 4px 3px rgba($medium-turquoise, 0.8)
 		&:active
 			//text-shadow: 0px 0px rgba($medium-turquoise, 0.9)
 	.subtitle
-		color: rgba($onyx, 0.75)
+		color: $black
 		font-family: $opensans
 		font-size: 1rem
 		font-weight: 700
@@ -183,7 +190,7 @@ footer ul
 	padding: 1rem
 	text-align: center
 	a
-		color: $sunny
+		color: $primeRed
 	li
 		display: inline-block
 		padding: 1em
